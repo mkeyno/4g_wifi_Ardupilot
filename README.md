@@ -1,6 +1,8 @@
 # ArduPilot Project
 This project intends to port [ArduPilot](https://github.com/ArduPilot/ardupilot) firmware on new hardware base on embedded Linux multiple-core system and ESP32.
-The main purpose of this project is to extend hardware abstract layer base on processing and task
+The main purpose of this project is to extend Modular design & hardware abstract layer base on processing and task.
+ESP32 is doble core processor with mature RTOS firmware 
+
 ## Project Motivation ##
 This idea came to mind when I intent to add camera on Ardupilot hardware and establish the video link under 4G network. 
 SimCom 7100 & 7600 were first choice as I was familiar with Arduino GPRS shield made of SimCom product and are cheap , 
