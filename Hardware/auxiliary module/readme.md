@@ -1,3 +1,5 @@
+
+ 
  Airprime WPx5xx-76xx series is a Multiple-core embedded Linux system which used as  auxiliary core system that can provide secondary & backup IMU data, GPS data, advance terrain navigation , 4G video streaming and any hardware management for enhancing drone capabilities
 
 ## Specification  ##
@@ -13,6 +15,8 @@ In this 2 layer design following peripheral has been break out
 
 size of board is 7x5 cm
 
-[dfghdfg](Resources/Images/WP75xx 2 no usb_v down.png)
+ ![dfghdfg](https://github.com/mkeyno/4g_wifi_Ardupilot/blob/master/Resources/Images/WP75xx%202%20no%20usb_v%20up.png)
 
- [hdfghd](Resources/Images/WP75xx 2 no usb_v up.png)
+ ![hdfghd](https://github.com/mkeyno/4g_wifi_Ardupilot/blob/master/Resources/Images/WP75xx%202%20no%20usb_v%20down.png)
+
+ 
