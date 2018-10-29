@@ -26,7 +26,7 @@ Flash Total 512 MB
 RAM Total 256 MB
     128 MB Reserved for Application processor 
 
-![Pin Functions](4g_wifi_Ardupilot/Resources/Images/sierrawireless.jpg)
+![Pin Functions](Resources/Images/sierrawireless.jpg)
 
 ## Milestone ##
 - Hardware Design:
