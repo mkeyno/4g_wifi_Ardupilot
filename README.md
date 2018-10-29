@@ -25,7 +25,9 @@ Flash Total 512 MB
     256 MB Reserved for Application processor 
 RAM Total 256 MB
     128 MB Reserved for Application processor 
-![Pin Functions](docs/esp32_pinmap.png)
+
+![Pin Functions](4g_wifi_Ardupilot/Resources/Images/sierrawireless.jpg)
+
 ## Milestone ##
 - Hardware Design:
   - ***4G board***: base on Airprime
