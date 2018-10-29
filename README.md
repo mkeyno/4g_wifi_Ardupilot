@@ -6,9 +6,9 @@ The main purpose of this project is to extend Modular design & hardware abstract
 - Multiple-core embedded Linux system is auxiliary  core system  which can provide secondary & backup IMU data, GPS data, advance terrain navigation , 4G video streaming and any hardware management for enhancing drone capabilities. Similar to IO module this also has its own development platform base on popular Linux  
 following is the block diagram and functional modules chart for this project
 
-[***Block diagram***](Resources/Images/Picture1.png)
+![***Block diagram***](Resources/Images/Picture1.png)
 
-[***Modules chart***](Resources/Images/Picture2.png)
+![***Modules chart***](Resources/Images/Picture2.png)
 
 
 ## Project Motivation ##
