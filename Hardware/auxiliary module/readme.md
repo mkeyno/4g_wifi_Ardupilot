@@ -13,6 +13,6 @@ In this 2 layer design following peripheral has been break out
 
 size of board is 7x5 cm
 
-![image](Resources/Images/WP75xx 2 no usb_v down.png)
+![image down](Resources/Images/WP75xx 2 no usb_v down.png)
 
-![image](Resources/Images/WP75xx 2 no usb_v up.png)
+![image up](Resources/Images/WP75xx 2 no usb_v up.png)
