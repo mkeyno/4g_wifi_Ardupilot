@@ -1,8 +1,14 @@
 # ArduPilot Project
 This project intends to port [ArduPilot](https://github.com/ArduPilot/ardupilot) firmware on new hardware base on embedded Linux multiple-core system and ESP32.
 The main purpose of this project is to extend Modular design & hardware abstract layer base on processing and task.
-- ESP32 is double core processor with mature RTOS firmware. One core dedicated for IMU data fusing and main autopilot function (Stabilize, Attitude control, Navigation) other core responsible for communication, auxiliary module management and ground station 
+- ESP32 is double core processor with mature RTOS firmware. One core dedicated for IMU data fusing and main autopilot function (Stabilize, Attitude control, Navigation) other core responsible for communication, auxiliary module management and ground station. its 2.4 Ghz wifi link is sitable for local data link between drone and ground station 
 - separate IO module, manage pilot commands and drone actuators data for main core system and it only exchange data on bus line in standard communication protocol (I2C, SPI, Serial), this reduce processor resources and complexity of main code, because each part is responsible for processing its own data (hardware encapsulation).IO module can be made with any designed hardware and software base on drone specification and just need to put data on TX buffer and received command from RX buffer. In this project I use same IC in Ardupilot hardware (STM32f103C8T6). Primary hardware design located at [here](Hardware/IO_Modules/readme.md) 
+- Multiple-core embedded Linux system is auxiliary  core system  which can provide secondary & backup IMU data, GPS data, advance terrain navigation , 4G video streaming and any hardware management for enhancing drone capabilities. Similar to IO module this also has its own development platform base on popular Linux  
+following is the block diagram and functional modules chart for this project
+
+[***Block diagram***](Resources/Images/Picture1.png)
+
+[***Modules chart***](Resources/Images/Picture2.png)
 
 
 ## Project Motivation ##
