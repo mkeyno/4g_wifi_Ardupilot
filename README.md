@@ -15,10 +15,10 @@ The AirPrime WP75xx/AirPrime WP8548 is a powerful multiple-core system that incl
 - One QDSP6 core, embedding Telecom firmware with integrated cellular voice (future firmware release), data and wireless Internet connectivity
 - One Cortex-A5 core entirely dedicated to customer application and natively provided with Linux operating system
 The application processor memory is dedicated to the Legato platform, including:
-    -Linux kernel
-    -Root file system
-    -Application framework
-    -Customer applications
+    - Linux kernel
+    - Root file system
+    - Application framework
+    - Customer applications
 
 - Memory Details WP75xx / WP8548
 Flash Total 512 MB
