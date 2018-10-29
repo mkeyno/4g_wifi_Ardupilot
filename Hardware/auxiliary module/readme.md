@@ -1,0 +1,1 @@
+ Airprime WPx5xx-76xx series is a Multiple-core embedded Linux system which used as  auxiliary core system that can provide secondary & backup IMU data, GPS data, advance terrain navigation , 4G video streaming and any hardware management for enhancing drone capabilities
