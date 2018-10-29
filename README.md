@@ -10,7 +10,22 @@ however after digging around those product I’ve noticed  the only available fi
 Unfortunately [SimCom]() has not provided yet any open SDK for IoT developer , hence I look to the other 4G modules in market such as [Telit]( https://www.telit.com)  , [InnoCom]( https://www.innocomm.com), [Gemalto]( https://www.gemalto.com), [Multitech]( https://www.multitech.com/), [Sierra Wireless]( https://www.sierrawireless.com), [Quectel]( https://www.quectel.com)
 I found [Airprime WPx5xx-76xx series](https://source.sierrawireless.com/devices/wp-series/wp7502/) very Promising and elegant. 
 while Airprime series has powerful and rich hardware with multi core, it also  embedded with Linux and open source SDK  for IoT developer 
+summary of this product specification  come as follow
+The AirPrime WP75xx/AirPrime WP8548 is a powerful multiple-core system that includes:
+• One QDSP6 core, embedding Telecom firmware with integrated cellular voice (future firmware release), data and wireless Internet connectivity
+• One Cortex-A5 core entirely dedicated to customer application and natively provided with Linux operating system
+The application processor memory is dedicated to the Legato platform, including:
+• Linux kernel
+• Root file system
+• Application framework
+• Customer applications
 
+Memory Details WP75xx / WP8548
+Flash Total 512 MB
+    256 MB Reserved for Application processor 
+RAM Total 256 MB
+    128 MB Reserved for Application processor 
+![Pin Functions](docs/esp32_pinmap.png)
 ## Milestone ##
 - Hardware Design:
   - ***4G board***: base on Airprime
