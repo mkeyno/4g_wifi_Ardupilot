@@ -1,0 +1,13 @@
+#define CONFIG_HAL_BOARD           HAL_BOARD_ESP32
+#define CONFIG_ARCH_BOARD_ESP32_V1
+
+
+
+
+
+
+
+
+
+
+
