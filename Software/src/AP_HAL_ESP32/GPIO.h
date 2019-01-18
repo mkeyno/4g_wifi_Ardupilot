@@ -1,0 +1,85 @@
+#pragma once
+
+#include "./src/AP_HAL_ESP32.h"
+
+#define ESP32_GPIO_PIEZO_PIN              -1
+#define ESP32_GPIO_EXT_FMU_RELAY1_PIN     -1
+#define ESP32_GPIO_EXT_FMU_RELAY2_PIN     -1
+#define ESP32_GPIO_EXT_IO_RELAY1_PIN      -1
+#define ESP32_GPIO_EXT_IO_RELAY2_PIN      -1
+#define ESP32_GPIO_EXT_IO_ACC1_PIN        -1
+#define ESP32_GPIO_EXT_IO_ACC2_PIN        -1
+
+/*
+  start servo channels used as GPIO at 50. Pin 50 is
+  the first FMU servo pin
+ */
+#define ESP32_GPIO_FMU_SERVO_PIN(n)       (n+50)
+
+#ifndef HAL_GPIO_A_LED_PIN
+#define HAL_GPIO_A_LED_PIN        27
+#endif
+#ifndef HAL_GPIO_B_LED_PIN
+#define HAL_GPIO_B_LED_PIN        26
+#endif
+#ifndef HAL_GPIO_C_LED_PIN
+#define HAL_GPIO_C_LED_PIN        25
+#endif
+#ifndef HAL_GPIO_LED_ON
+#define HAL_GPIO_LED_ON           0
+#endif
+#ifndef HAL_GPIO_LED_OFF
+#define HAL_GPIO_LED_OFF          1
+#endif
+
+class ESP32::ESP32GPIO : public AP_HAL::GPIO {
+public:
+    ESP32GPIO();
+    void    init() override;
+    void    pinMode(uint8_t pin, uint8_t output) override;
+    uint8_t read(uint8_t pin) override;
+    void    write(uint8_t pin, uint8_t value) override;
+    void    toggle(uint8_t pin) override;
+
+    /* Alternative interface: */
+    AP_HAL::DigitalSource* channel(uint16_t n) override;
+
+    /* Interrupt interface: */
+    bool attach_interrupt(uint8_t interrupt_num,
+                          irq_handler_fn_t fn,
+                          INTERRUPT_TRIGGER_TYPE mode) override;
+
+    /* return true if USB cable is connected */
+    bool usb_connected(void) override;
+
+    // used by UART code to avoid a hw bug in the AUAV-X2
+    void set_usb_connected(void) { _usb_connected = true; }
+
+private:
+    int _led_fd = -1;
+    int _gpio_fmu_fd = -1;
+    int _gpio_io_fd = -1;
+    bool _usb_connected = false;
+
+    static int irq_handler_gpio0(int irq, void *context);
+    static int irq_handler_gpio1(int irq, void *context);
+    static int irq_handler_gpio2(int irq, void *context);
+    static int irq_handler_gpio3(int irq, void *context);
+    static int irq_handler_gpio4(int irq, void *context);
+    static int irq_handler_gpio5(int irq, void *context);
+    static void irq_handler(uint8_t pin);
+
+    static uint32_t pin_to_gpio(uint8_t pin);
+    static AP_HAL::GPIO::irq_handler_fn_t pin_handlers[];
+};
+
+class ESP32::ESP32DigitalSource : public AP_HAL::DigitalSource {
+public:
+    ESP32DigitalSource(uint8_t v);
+    void    mode(uint8_t output);
+    uint8_t read();
+    void    write(uint8_t value);
+    void    toggle();
+private:
+    uint8_t _v;
+};
